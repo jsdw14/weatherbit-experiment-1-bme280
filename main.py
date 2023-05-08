@@ -1,11 +1,11 @@
 def on_button_pressed_a():
     global item
     while item == 0:
-        basic.show_string("T:" + ("" + str(Math.idiv(weatherbit.temperature(), 100))))
+        basic.show_string("T:" + str(Math.idiv(weatherbit.temperature(), 100)))
     while item == 1:
-        basic.show_string("H:" + ("" + str(Math.idiv(weatherbit.humidity(), 1024))))
+        basic.show_string("H:" + str(Math.idiv(weatherbit.humidity(), 1024)))
     while item == 2:
-        basic.show_string("P:" + ("" + str(Math.idiv(weatherbit.pressure(), 25600))))
+        basic.show_string("P:" + str(Math.idiv(weatherbit.pressure(), 25600)))
     item = 0
 input.on_button_pressed(Button.A, on_button_pressed_a)
 
